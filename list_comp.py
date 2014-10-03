@@ -1,4 +1,5 @@
 number_list = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
+word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "and", "spam"]
 
 #[expr for  item1 in  seq1 if condition]
 
@@ -22,3 +23,12 @@ def all_evens(number_list):
     return evens
 
 print all_evens(number_list)
+
+def long_words(word_list):
+    long_list = []
+
+    [long_list.append(word) for word in word_list if len(word) >= 4]
+
+    return long_list
+
+print long_words(word_list)
