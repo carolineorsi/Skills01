@@ -88,7 +88,13 @@ print sum_numbers(number_list)
 
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(number_list):
-    return 0
+    total = 1
+    for value in number_list:
+        total = total * value
+   
+    return total
+
+print mult_numbers(number_list)
 
 # Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
 def join_strings(word_list):
