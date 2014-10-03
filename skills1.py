@@ -19,9 +19,16 @@ def all_even(number_list):
             evens.append(item)
     return evens
 print all_even(number_list)
-# Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
+
+# Write a function that takes a list of strings and return a new list with all strings of length 4 or greater.
 def long_words(word_list):
-    return []
+    longs = []
+    for word in word_list:
+        if len(word) >= 4:
+            longs = longs + [word]
+    return longs
+
+print long_words(word_list)    
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
