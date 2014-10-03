@@ -105,6 +105,17 @@ def join_strings(word_list):
 
 print join_strings(word_list)
 
+def list_length(list):
+    count = 0
+    for item in list:
+        count += 1
+    return count 
+
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
-    return 0
+    ave = float(sum_numbers(number_list)) / list_length(number_list)
+    
+    return ave
+
+print average(number_list)
+
