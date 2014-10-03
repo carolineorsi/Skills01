@@ -60,12 +60,22 @@ print largest(number_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
-    return []
+    new_list = []
+    for item in number_list:
+        new_list = new_list + [float(item) / 2]
+    return new_list
+
+print halvesies(number_list)
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    return []
+    lengths = []
+    for word in word_list:
+        lengths = lengths + [word_length(word)]
 
+    return lengths
+
+print word_lengths(word_list)
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
     return 0
