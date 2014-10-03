@@ -8,7 +8,7 @@ def all_odd(number_list):
     odds = []
     for item in number_list:
         if item % 2 != 0:
-            odds.append(item)
+            odds = odds + [item]
     return odds
 print all_odd(number_list)
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
@@ -16,15 +16,22 @@ def all_even(number_list):
     evens = []
     for item in number_list:
         if item % 2 == 0:
-            evens.append(item)
+            evens = evens + [item]
     return evens
 print all_even(number_list)
 
 # Write a function that takes a list of strings and return a new list with all strings of length 4 or greater.
+def word_length(word):
+    count = 0
+    for letter in word:
+        count += 1
+    return count 
+
 def long_words(word_list):
     longs = []
+
     for word in word_list:
-        if len(word) >= 4:
+        if word_length(word) >= 4:
             longs = longs + [word]
     return longs
 
