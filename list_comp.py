@@ -71,3 +71,7 @@ def halvesies(number_list):
 
 print halvesies(number_list)
 
+def word_lengths(word_list):
+    return [len(word) for word in word_list]
+
+print word_lengths(word_list)
