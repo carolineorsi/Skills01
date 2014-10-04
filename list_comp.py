@@ -10,11 +10,11 @@ def all_odd(number_list):
     return odds
 print all_odd(number_list)
 
-def insert_value(number_list, value, index):
-    number_list[index:index] = [value]
+# def insert_value(number_list, value, index):
+#     number_list[index:index] = [value]
 
-    return number_list
-print insert_value(number_list, 4, 5)
+#     return number_list
+# print insert_value(number_list, 4, 5)
 
 def all_evens(number_list):
     # evens = []
@@ -75,3 +75,20 @@ def word_lengths(word_list):
     return [len(word) for word in word_list]
 
 print word_lengths(word_list)
+
+
+def add(a, b):
+    return a + b
+
+def sum_numbers(number_list):
+    return reduce(add, number_list)
+
+print sum_numbers(number_list)
+
+def mult(a, b):
+    return a * b
+
+def multiply(number_list):
+    return reduce(mult, number_list)
+
+print multiply(number_list)
