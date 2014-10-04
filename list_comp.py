@@ -63,3 +63,11 @@ def larger(a, b):
         return b
 
 print reduce(larger, number_list)
+
+
+def halvesies(number_list):
+    return [float(item)/2 for item in number_list]
+
+
+print halvesies(number_list)
+
