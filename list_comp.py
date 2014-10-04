@@ -17,18 +17,49 @@ def insert_value(number_list, value, index):
 print insert_value(number_list, 4, 5)
 
 def all_evens(number_list):
-    evens = []
-    [evens.append(item) for item in number_list if item % 2 == 0]
-
-    return evens
+    # evens = []
+    # [evens.append(item) for item in number_list if item % 2 == 0]
+    return [item for item in number_list if item % 2 == 0]
+    # return evens
 
 print all_evens(number_list)
 
+def uppercase_words(words):
+    # ["apple", "berry"] = ["APPLE"]    s.upper()
+
+    return [s.upper() for s in words if s.startswith("a")]
+
 def long_words(word_list):
-    long_list = []
+    
 
-    [long_list.append(word) for word in word_list if len(word) >= 4]
-
-    return long_list
+    return [word for word in word_list if len(word) >= 4]
 
 print long_words(word_list)
+
+def smaller(a, b):
+    if a < b:
+        return a
+    else:
+        return b
+
+
+
+def smallest(number_list):
+    # smaller = number_list[0]
+    # for item in number_list:
+    #     if item < smaller:
+    #         smaller = item
+    
+    print reduce(smaller, number_list)
+
+    # return item 
+
+smallest(number_list)
+
+def larger(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+print reduce(larger, number_list)
