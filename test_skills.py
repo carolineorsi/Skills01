@@ -27,5 +27,9 @@ class TestSkillsFunctions(unittest.TestCase):
 		self.assertEqual(largest(self.numbers), 9)
 		self.assertEqual(largest(self.numbers2), 14)
 
+	def test_halvesies(self):
+		self.assertEqual(halvesies(self.numbers), [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5])
+		self.assertEqual(halvesies(self.numbers2), [2.0, 4.0, 1.5, 0.0, 7.0, -1.0])
+
 if __name__ == '__main__':
     unittest.main()
