@@ -31,5 +31,12 @@ class TestSkillsFunctions(unittest.TestCase):
 		self.assertEqual(halvesies(self.numbers), [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5])
 		self.assertEqual(halvesies(self.numbers2), [2.0, 4.0, 1.5, 0.0, 7.0, -1.0])
 
+	def test_word_lengths(self):
+		self.assertEqual(word_lengths(self.words), [5, 2, 4, 2, 6, 5])
+
+	def test_sum_numbers(self):
+		self.assertEqual(sum_numbers(self.numbers), 45)
+		self.assertEqual(sum_numbers(self.numbers2), 27)
+
 if __name__ == '__main__':
     unittest.main()
