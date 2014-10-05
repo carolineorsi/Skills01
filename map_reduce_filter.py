@@ -4,52 +4,22 @@ number_list = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
 word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "and", "spam"]
 
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
-def odd(a):
-    if a % 2 != 1:
-        return True
-    else:
-        return False
 
 def all_odd(number_list):
-    filter(odd, number_list)
-
-print all_odd(number_list)
+    return filter(lambda x: x % 2 == 1, number_list)
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
-    evens = []
-    for item in number_list:
-        if item % 2 == 0:
-            evens = evens + [item]
-    return evens
-print all_even(number_list)
+    return filter(lambda x: x % 2 == 0, number_list)
 
 # Write a function that takes a list of strings and return a new list with all strings of length 4 or greater.
-def word_length(word):
-    count = 0
-    for letter in word:
-        count += 1
-    return count 
-
 def long_words(word_list):
-    longs = []
-
-    for word in word_list:
-        if word_length(word) >= 4:
-            longs = longs + [word]
-    return longs
-
-print long_words(word_list)    
+    return filter(lambda item: len(item) >= 4, word_list) 
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
-    i = number_list[0]
-    for item in number_list:
-        if item < i:
-            i = item
-    return i
-
-print smallest(number_list)
+    smaller = lambda a, b: a if (a < b) else b
+    return reduce(smaller, number_list)
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
@@ -75,7 +45,7 @@ print halvesies(number_list)
 def word_lengths(word_list):
     lengths = []
     for word in word_list:
-        lengths = lengths + [word_length(word)]
+        lengths = lengths + [len(word)]
 
     return lengths
 
