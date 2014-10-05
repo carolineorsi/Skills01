@@ -23,31 +23,16 @@ def smallest(number_list):
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
-    i = number_list[0]
-    for item in number_list:
-        if item > i:
-            i = item
-    return i
-
-
-print largest(number_list)
+    larger = lambda a, b: a if (a > b) else b
+    return reduce(larger, number_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
-    new_list = []
-    for item in number_list:
-        new_list = new_list + [float(item) / 2]
-    return new_list
-
-print halvesies(number_list)
+    return map(lambda a: a / 2.0, number_list)
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    lengths = []
-    for word in word_list:
-        lengths = lengths + [len(word)]
-
-    return lengths
+    return map(lambda word: len(word), word_list)
 
 print word_lengths(word_list)
 
