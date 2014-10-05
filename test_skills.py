@@ -16,5 +16,9 @@ class TestSkillsFunctions(unittest.TestCase):
 	def test_long_words(self):
 		self.assertEqual(long_words(self.words), ["hello", "name", "Buster", "Posey"])
 
+	def test_smallest(self):
+		self.assertEqual(smallest(self.numbers), 1)
+		self.assertEqual(smallest([4, 8, 3, 0, 14, -2]), -2)
+
 if __name__ == '__main__':
     unittest.main()
