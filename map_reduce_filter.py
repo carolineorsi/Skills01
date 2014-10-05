@@ -18,13 +18,11 @@ def long_words(word_list):
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
-    smaller = lambda a, b: a if (a < b) else b
-    return reduce(smaller, number_list)
+    return reduce(lambda a, b: a if (a < b) else b, number_list)
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
-    larger = lambda a, b: a if (a > b) else b
-    return reduce(larger, number_list)
+    return reduce(lambda a, b: a if (a > b) else b, number_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
@@ -34,47 +32,20 @@ def halvesies(number_list):
 def word_lengths(word_list):
     return map(lambda word: len(word), word_list)
 
-print word_lengths(word_list)
-
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
-    total = 0
-    for value in number_list:
-        total = total + value
-    return total
-
-print sum_numbers(number_list)
+    return reduce(lambda a, b: a + b, number_list)
 
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(number_list):
-    total = 1
-    for value in number_list:
-        total = total * value
-   
-    return total
-
-print mult_numbers(number_list)
+    return reduce(lambda a, b: a * b, number_list)
 
 # Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
 def join_strings(word_list):
-    new_string = ""
-    for word in word_list:
-        new_string = new_string + " " + word
-    return new_string
-
-print join_strings(word_list)
-
-def list_length(list):
-    count = 0
-    for item in list:
-        count += 1
-    return count 
+    return reduce(lambda word1, word2: word1 + " " + word2, word_list)
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
-    ave = float(sum_numbers(number_list)) / list_length(number_list)
-    
-    return ave
+    return reduce(lambda a, b: a + b, number_list) / float(len(number_list))
 
-print average(number_list)
 
