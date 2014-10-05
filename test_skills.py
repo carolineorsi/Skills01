@@ -38,5 +38,16 @@ class TestSkillsFunctions(unittest.TestCase):
 		self.assertEqual(sum_numbers(self.numbers), 45)
 		self.assertEqual(sum_numbers(self.numbers2), 27)
 
+	def test_mult_numbers(self):
+		self.assertEqual(mult_numbers(self.numbers), 362880)
+		self.assertEqual(mult_numbers(self.numbers2), 0)
+
+	def test_join_strings(self):
+		self.assertEqual(join_strings(self.words), "hello my name is Buster Posey")
+
+	def test_average(self):
+		self.assertEqual(average(self.numbers), 5.0)
+		self.assertEqual(average(self.numbers2), 4.5)
+
 if __name__ == '__main__':
     unittest.main()
